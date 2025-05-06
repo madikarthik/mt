@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore our luxurious rooms and suites at Hotel Mount Kailash - Each offering comfort and breathtaking mountain views in Sangla, Himachal Pradesh">
+  <title>Rooms & Suites - Hotel Mount Kailash</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/rooms.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header id="header">
+    <div class="header-container">
+      <div class="logo">
+        <a href="index.html">
+          <h1>Hotel Mount Kailash</h1>
+        </a>
+      </div>
+      <nav class="navigation">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="rooms.html" class="active">Rooms</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="book-now-small">
+        <a href="booking.html" class="btn btn-primary">Book Now</a>
+      </div>
+      <div class="mobile-nav-toggle">
+        <span class="hamburger"></span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Page Banner -->
+    <section class="page-banner">
+      <div class="banner-content">
+        <h1>Our Rooms & Suites</h1>
+        <div class="breadcrumbs">
+          <a href="index.html">Home</a> <span>/</span> <span>Rooms</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Room Filters -->
+    <section class="room-filters section-padding">
+      <div class="container">
+        <div class="filter-tabs">
+          <button class="filter-tab active" data-filter="all">All Rooms</button>
+          <button class="filter-tab" data-filter="deluxe">Deluxe Rooms</button>
+          <button class="filter-tab" data-filter="premium">Premium Suites</button>
+          <button class="filter-tab" data-filter="family">Family Suites</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rooms List -->
+    <section class="rooms-list section-padding">
+      <div class="container">
+        <div class="rooms-grid">
+          <!-- Deluxe Room -->
+          <div class="room-item deluxe" id="deluxe">
+            <div class="room-images">
+              <div class="main-image">
+                <img src="https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Deluxe Room">
+              </div>
+              <div class="thumbnail-images">
+                <img src="https://images.pexels.com/photos/1457847/pexels-photo-1457847.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Deluxe Room - Bathroom">
+                <img src="https://images.pexels.com/photos/26139/pexels-photo-26139.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Deluxe Room - View">
+                <img src="https://images.pexels.com/photos/237371/pexels-photo-237371.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Deluxe Room - Details">
+              </div>
+            </div>
+            <div class="room-details">
+              <div class="room-heading">
+                <h2>Deluxe Room</h2>
+                <div class="room-price">From ₹5,000<span>/night</span></div>
+              </div>
+              <div class="room-description">
+                <p>Our spacious Deluxe Rooms offer the perfect blend of comfort and mountain charm. Each room features a private balcony with stunning views of the Sangla Valley, allowing you to wake up to the breathtaking sight of snow-capped peaks.</p>
+                <p>With elegant décor inspired by traditional Kinnauri aesthetics and modern amenities, these rooms provide a cozy retreat after a day of exploring.</p>
+              </div>
+              <div class="room-features">
+                <h3>Room Features</h3>
+                <ul class="features-list">
+                  <li><i class="fas fa-mountain"></i> Mountain View</li>
+                  <li><i class="fas fa-expand-arrows-alt"></i> 300 sq. ft.</li>
+                  <li><i class="fas fa-bed"></i> King or Twin Beds</li>
+                  <li><i class="fas fa-user-friends"></i> Sleeps 2</li>
+                  <li><i class="fas fa-wifi"></i> Free WiFi</li>
+                  <li><i class="fas fa-snowflake"></i> Climate Control</li>
+                  <li><i class="fas fa-tv"></i> Flat-screen TV</li>
+                  <li><i class="fas fa-coffee"></i> Tea/Coffee Maker</li>
+                  <li><i class="fas fa-bath"></i> Private Bathroom</li>
+                  <li><i class="fas fa-concierge-bell"></i> Room Service</li>
+                </ul>
+              </div>
+              <div class="room-booking">
+                <a href="booking.html?room=deluxe" class="btn btn-primary">Book Now</a>
+                <a href="#" class="btn btn-secondary">Check Availability</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Premium Suite -->
+          <div class="room-item premium" id="premium">
+            <div class="room-images">
+              <div class="main-image">
+                <img src="https://images.pexels.com/photos/2029731/pexels-photo-2029731.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Premium Suite">
+              </div>
+              <div class="thumbnail-images">
+                <img src="https://images.pexels.com/photos/6585600/pexels-photo-6585600.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Premium Suite - Living Area">
+                <img src="https://images.pexels.com/photos/6394557/pexels-photo-6394557.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Premium Suite - Bathroom">
+                <img src="https://images.pexels.com/photos/6585750/pexels-photo-6585750.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Premium Suite - Work Area">
+              </div>
+            </div>
+            <div class="room-details">
+              <div class="room-heading">
+                <h2>Premium Suite</h2>
+                <div class="room-price">From ₹8,000<span>/night</span></div>
+              </div>
+              <div class="room-description">
+                <p>Our Premium Suites offer a luxurious retreat with panoramic views of the Himalayas. Featuring a separate living area and bedroom, these spacious suites are perfect for guests seeking extra comfort and privacy.</p>
+                <p>Each suite is elegantly furnished with premium fabrics, local artworks, and thoughtful amenities to ensure a truly indulgent mountain stay.</p>
+              </div>
+              <div class="room-features">
+                <h3>Suite Features</h3>
+                <ul class="features-list">
+                  <li><i class="fas fa-mountain"></i> Panoramic View</li>
+                  <li><i class="fas fa-expand-arrows-alt"></i> 500 sq. ft.</li>
+                  <li><i class="fas fa-bed"></i> King Bed</li>
+                  <li><i class="fas fa-couch"></i> Separate Living Area</li>
+                  <li><i class="fas fa-user-friends"></i> Sleeps 2</li>
+                  <li><i class="fas fa-wifi"></i> Free WiFi</li>
+                  <li><i class="fas fa-snowflake"></i> Climate Control</li>
+                  <li><i class="fas fa-tv"></i> 2 Flat-screen TVs</li>
+                  <li><i class="fas fa-utensils"></i> Dining Area</li>
+                  <li><i class="fas fa-coffee"></i> Espresso Machine</li>
+                  <li><i class="fas fa-bath"></i> Luxury Bathroom</li>
+                  <li><i class="fas fa-hot-tub"></i> Jacuzzi Tub</li>
+                  <li><i class="fas fa-concierge-bell"></i> 24/7 Room Service</li>
+                </ul>
+              </div>
+              <div class="room-booking">
+                <a href="booking.html?room=premium" class="btn btn-primary">Book Now</a>
+                <a href="#" class="btn btn-secondary">Check Availability</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Family Suite -->
+          <div class="room-item family" id="family">
+            <div class="room-images">
+              <div class="main-image">
+                <img src="https://images.pexels.com/photos/3634741/pexels-photo-3634741.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Family Suite">
+              </div>
+              <div class="thumbnail-images">
+                <img src="https://images.pexels.com/photos/1571459/pexels-photo-1571459.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Family Suite - Second Bedroom">
+                <img src="https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Family Suite - Living Room">
+                <img src="https://images.pexels.com/photos/6969866/pexels-photo-6969866.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Family Suite - Dining Area">
+              </div>
+            </div>
+            <div class="room-details">
+              <div class="room-heading">
+                <h2>Family Suite</h2>
+                <div class="room-price">From ₹12,000<span>/night</span></div>
+              </div>
+              <div class="room-description">
+                <p>Perfect for families or groups, our Family Suites offer generous space with two bedrooms, a common living area, and a private terrace overlooking the valley. The master bedroom features a king-sized bed, while the second bedroom comes with twin beds.</p>
+                <p>These suites are thoughtfully designed to provide both togetherness and privacy, making them ideal for memorable family vacations in the mountains.</p>
+              </div>
+              <div class="room-features">
+                <h3>Suite Features</h3>
+                <ul class="features-list">
+                  <li><i class="fas fa-mountain"></i> Valley View</li>
+                  <li><i class="fas fa-expand-arrows-alt"></i> 750 sq. ft.</li>
+                  <li><i class="fas fa-bed"></i> 1 King + 2 Twin Beds</li>
+                  <li><i class="fas fa-door-open"></i> 2 Bedrooms</li>
+                  <li><i class="fas fa-couch"></i> Living Room</li>
+                  <li><i class="fas fa-user-friends"></i> Sleeps 4-5</li>
+                  <li><i class="fas fa-wifi"></i> Free WiFi</li>
+                  <li><i class="fas fa-snowflake"></i> Climate Control</li>
+                  <li><i class="fas fa-tv"></i> Multiple TVs</li>
+                  <li><i class="fas fa-utensils"></i> Dining Area</li>
+                  <li><i class="fas fa-coffee"></i> Kitchenette</li>
+                  <li><i class="fas fa-bath"></i> 2 Bathrooms</li>
+                  <li><i class="fas fa-concierge-bell"></i> VIP Services</li>
+                </ul>
+              </div>
+              <div class="room-booking">
+                <a href="booking.html?room=family" class="btn btn-primary">Book Now</a>
+                <a href="#" class="btn btn-secondary">Check Availability</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Amenities Section -->
+    <section class="amenities section-padding bg-light">
+      <div class="container">
+        <div class="section-heading">
+          <span class="subheading">Comforts</span>
+          <h2>Standard Room Amenities</h2>
+          <span class="heading-divider"></span>
+        </div>
+
+        <div class="amenities-grid">
+          <div class="amenity-category">
+            <h3><i class="fas fa-bed"></i> Comfort</h3>
+            <ul>
+              <li>Premium Mattresses</li>
+              <li>Luxury Linens</li>
+              <li>Blackout Curtains</li>
+              <li>Climate Control</li>
+              <li>Soundproofed Rooms</li>
+            </ul>
+          </div>
+          <div class="amenity-category">
+            <h3><i class="fas fa-bath"></i> Bathroom</h3>
+            <ul>
+              <li>Walk-in Shower</li>
+              <li>Signature Toiletries</li>
+              <li>Hairdryer</li>
+              <li>Bathrobe & Slippers</li>
+              <li>Heated Floors</li>
+            </ul>
+          </div>
+          <div class="amenity-category">
+            <h3><i class="fas fa-tv"></i> Entertainment</h3>
+            <ul>
+              <li>Flat-screen TV</li>
+              <li>Satellite Channels</li>
+              <li>High-speed WiFi</li>
+              <li>USB Charging Ports</li>
+              <li>Bluetooth Speakers</li>
+            </ul>
+          </div>
+          <div class="amenity-category">
+            <h3><i class="fas fa-concierge-bell"></i> Services</h3>
+            <ul>
+              <li>24/7 Room Service</li>
+              <li>Daily Housekeeping</li>
+              <li>Laundry Service</li>
+              <li>Turn-down Service</li>
+              <li>Concierge Assistance</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Room Policies -->
+    <section class="room-policies section-padding">
+      <div class="container">
+        <div class="section-heading">
+          <span class="subheading">Information</span>
+          <h2>Room Policies</h2>
+          <span class="heading-divider"></span>
+        </div>
+
+        <div class="policies-grid">
+          <div class="policy-item">
+            <div class="policy-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <h3>Check-in & Check-out</h3>
+            <p>Check-in: 2:00 PM<br>Check-out: 11:00 AM<br>Early check-in and late check-out available upon request, subject to availability.</p>
+          </div>
+          <div class="policy-item">
+            <div class="policy-icon">
+              <i class="fas fa-child"></i>
+            </div>
+            <h3>Children Policy</h3>
+            <p>Children of all ages are welcome.<br>Children under 6 years stay free when using existing bedding.<br>Extra beds available for older children at additional charge.</p>
+          </div>
+          <div class="policy-item">
+            <div class="policy-icon">
+              <i class="fas fa-paw"></i>
+            </div>
+            <h3>Pet Policy</h3>
+            <p>Well-behaved pets are welcome in select rooms with prior arrangement.<br>Additional cleaning fee applies.<br>Please contact us for details.</p>
+          </div>
+          <div class="policy-item">
+            <div class="policy-icon">
+              <i class="fas fa-smoking-ban"></i>
+            </div>
+            <h3>Smoking Policy</h3>
+            <p>All rooms are non-smoking.<br>Designated smoking areas are available outside.<br>Penalty applies for smoking in rooms.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta section-padding">
+      <div class="container">
+        <div class="cta-content">
+          <h2>Ready to Experience Mountain Luxury?</h2>
+          <p>Book your perfect room at Hotel Mount Kailash and wake up to breathtaking views.</p>
+          <a href="booking.html" class="btn btn-primary">Book Your Stay</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-about">
+          <h3>Hotel Mount Kailash</h3>
+          <p>Luxury mountain accommodation in the heart of Sangla Valley, Himachal Pradesh, offering spectacular views and unparalleled comfort.</p>
+        </div>
+        <div class="footer-contact">
+          <h3>Contact Us</h3>
+          <ul>
+            <li><i class="fas fa-map-marker-alt"></i> Sangla, Kinnaur, Himachal Pradesh, India</li>
+            <li><i class="fas fa-phone"></i> +91 98765 43210</li>
+            <li><i class="fas fa-envelope"></i> info@mountkailashsangla.com</li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="rooms.html">Rooms</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="booking.html">Book Now</a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Hotel Mount Kailash. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/rooms.js"></script>
+</body>
+</html>

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Book your stay at Hotel Mount Kailash - Secure the best rates for your mountain getaway in Sangla, Himachal Pradesh">
+  <title>Book Your Stay - Hotel Mount Kailash</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/booking.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+  <header id="header">
+    <div class="header-container">
+      <div class="logo">
+        <a href="index.html">
+          <h1>Hotel Mount Kailash</h1>
+        </a>
+      </div>
+      <nav class="navigation">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="rooms.html">Rooms</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="book-now-small">
+        <a href="booking.html" class="btn btn-primary">Book Now</a>
+      </div>
+      <div class="mobile-nav-toggle">
+        <span class="hamburger"></span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-banner">
+      <div class="banner-content">
+        <h1>Book Your Stay</h1>
+        <div class="breadcrumbs">
+          <a href="index.html">Home</a> <span>/</span> <span>Book Now</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="booking-section section-padding">
+      <div class="container">
+        <div class="booking-container">
+          <div class="booking-form-container">
+            <div class="form-header">
+              <h2>Make a Reservation</h2>
+              <p>Fill out the form below to check availability and book your stay</p>
+            </div>
+            
+            <form id="bookingForm" class="booking-form">
+              <div class="form-group">
+                <label for="checkInDate">Check-in Date <span class="required">*</span></label>
+                <input type="date" id="checkInDate" name="checkInDate" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="checkOutDate">Check-out Date <span class="required">*</span></label>
+                <input type="date" id="checkOutDate" name="checkOutDate" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="roomType">Room Type <span class="required">*</span></label>
+                <select id="roomType" name="roomType" required>
+                  <option value="" disabled selected>Select Room Type</option>
+                  <option value="deluxe">Deluxe Room</option>
+                  <option value="premium">Premium Suite</option>
+                  <option value="family">Family Suite</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="mealPlan">Meal Plan <span class="required">*</span></label>
+                <select id="mealPlan" name="mealPlan" required>
+                  <option value="" disabled selected>Select Meal Plan</option>
+                  <option value="room-only">Room Only</option>
+                  <option value="with-breakfast">With Breakfast</option>
+                  <option value="veg-full">Vegetarian Breakfast and Dinner</option>
+                  <option value="non-veg-full">Non-Vegetarian Breakfast and Dinner</option>
+                </select>
+              </div>
+              
+              <div class="form-group">
+                <label for="guests">Number of Guests <span class="required">*</span></label>
+                <select id="guests" name="guests" required>
+                  <option value="1">1 Person</option>
+                  <option value="2" selected>2 People</option>
+                  <option value="3">3 People</option>
+                  <option value="4">4 People</option>
+                  <option value="5">5 People</option>
+                </select>
+              </div>
+              
+              <div class="form-divider"></div>
+              
+              <div class="form-group">
+                <label for="firstName">First Name <span class="required">*</span></label>
+                <input type="text" id="firstName" name="firstName" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="lastName">Last Name <span class="required">*</span></label>
+                <input type="text" id="lastName" name="lastName" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="email">Email Address <span class="required">*</span></label>
+                <input type="email" id="email" name="email" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="phone">Phone Number <span class="required">*</span></label>
+                <input type="tel" id="phone" name="phone" required>
+              </div>
+              
+              <div class="form-group full-width">
+                <label for="specialRequests">Special Requests</label>
+                <textarea id="specialRequests" name="specialRequests" rows="3"></textarea>
+              </div>
+              
+              <div class="form-divider"></div>
+              
+              <div class="booking-summary" id="bookingSummary">
+                <h3>Booking Summary</h3>
+                <div class="summary-details">
+                  <p><span>Selected Room:</span> <span id="summaryRoom">--</span></p>
+                  <p><span>Check-in Date:</span> <span id="summaryCheckIn">--</span></p>
+                  <p><span>Check-out Date:</span> <span id="summaryCheckOut">--</span></p>
+                  <p><span>Number of Nights:</span> <span id="summaryNights">--</span></p>
+                  <p><span>Number of Guests:</span> <span id="summaryGuests">--</span></p>
+                  <div class="summary-price">
+                    <p><span>Room Rate:</span> <span id="summaryRate">--</span></p>
+                    <p><span>Taxes & Fees:</span> <span id="summaryTaxes">--</span></p>
+                    <p class="total-price"><span>Total:</span> <span id="summaryTotal">--</span></p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="form-group full-width">
+                <div class="terms-checkbox">
+                  <input type="checkbox" id="termsAgree" name="termsAgree" required>
+                  <label for="termsAgree">I agree to the <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a></label>
+                </div>
+              </div>
+              
+              <div class="form-group full-width">
+                <button type="submit" class="btn btn-primary btn-block">Book Now</button>
+              </div>
+            </form>
+          </div>
+          
+          <div class="booking-sidebar">
+            <div class="why-book-direct">
+              <h3>Why Book Direct?</h3>
+              <ul>
+                <li><i class="fas fa-check"></i> Best Rate Guarantee</li>
+                <li><i class="fas fa-check"></i> Free Room Upgrade (Subject to Availability)</li>
+                <li><i class="fas fa-check"></i> Early Check-in & Late Check-out</li>
+                <li><i class="fas fa-check"></i> No Hidden Fees</li>
+                <li><i class="fas fa-check"></i> Flexible Cancellation Policy</li>
+              </ul>
+            </div>
+            
+            <div class="contact-booking">
+              <h3>Need Assistance?</h3>
+              <p>Our reservations team is available to help you with your booking.</p>
+              <div class="contact-info">
+                <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                <p><i class="fas fa-envelope"></i> book@mountkailashsangla.com</p>
+              </div>
+            </div>
+            
+            <div class="featured-room">
+              <h3>Featured Offer</h3>
+              <div class="featured-room-image">
+                <img src="https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Special Offer">
+              </div>
+              <h4>Himalayan Escape Package</h4>
+              <p>Book 3 nights and get 20% off, including daily breakfast and a complimentary mountain excursion.</p>
+              <a href="#" class="btn btn-secondary">View Offer</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="map-section section-padding bg-light">
+      <div class="container">
+        <div class="section-heading">
+          <span class="subheading">Location</span>
+          <h2>Find Us Here</h2>
+          <span class="heading-divider"></span>
+        </div>
+        <div id="hotel-map" style="height: 400px; border-radius: var(--radius-md);"></div>
+      </div>
+    </section>
+
+    <section class="booking-policies section-padding bg-light">
+      <div class="container">
+        <div class="section-heading">
+          <span class="subheading">Policies</span>
+          <h2>Reservation Policies</h2>
+          <span class="heading-divider"></span>
+        </div>
+
+        <div class="policies-grid">
+          <div class="policy-item">
+            <div class="policy-icon">
+              <i class="fas fa-calendar-check"></i>
+            </div>
+            <h3>Reservation & Deposit</h3>
+            <p>A 25% deposit is required to confirm your reservation. The remaining balance is due upon check-in. For peak season bookings (April-June and October-November), a 50% deposit is required.</p>
+          </div>
+          
+          <div class="policy-item">
+            <div class="policy-icon">
+              <i class="fas fa-ban"></i>
+            </div>
+            <h3>Cancellation Policy</h3>
+            <p>Cancellations made 14 days prior to arrival date will receive a full refund minus a 5% administrative fee. Cancellations made 7-13 days prior will receive a 75% refund. Cancellations made less than 7 days prior are non-refundable.</p>
+          </div>
+          
+          <div class="policy-item">
+            <div class="policy-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <h3>Extra Person Policy</h3>
+            <p>Room rates are based on double occupancy. Each additional person will be charged ₹1,500 per night. Children under 6 years stay free when sharing existing bedding. Maximum occupancy varies by room type.</p>
+          </div>
+          
+          <div class="policy-item">
+            <div class="policy-icon">
+              <i class="fas fa-snowflake"></i>
+            </div>
+            <h3>Seasonal Considerations</h3>
+            <p>During winter months (December-March), road access may be affected by weather conditions. We recommend checking road status before traveling. Bookings during this period may be subject to weather-related cancellations with full refunds.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials section-padding">
+      <div class="container">
+        <div class="section-heading">
+          <span class="subheading">Guest Experiences</span>
+          <h2>What Our Guests Say</h2>
+          <span class="heading-divider"></span>
+        </div>
+        <div class="testimonial-slider">
+          <div class="testimonial-slide active">
+            <div class="testimonial-content">
+              <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+              <p>"Our stay at Hotel Mount Kailash was nothing short of magical. The rooms were spacious and beautifully appointed, and the views were beyond compare. The staff anticipated our every need. We're already planning our return visit!"</p>
+              <div class="testimonial-author">
+                <div class="author-info">
+                  <h4>Vikram & Meera Patel</h4>
+                  <span>Mumbai</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-slide">
+            <div class="testimonial-content">
+              <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+              <p>"What an incredible experience! The hotel's location provides breathtaking views, and the traditional Kinnauri cuisine served at the restaurant was exceptional. The guided hike arranged by the hotel was a highlight of our trip."</p>
+              <div class="testimonial-author">
+                <div class="author-info">
+                  <h4>Sarah & John Thompson</h4>
+                  <span>United Kingdom</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-slide">
+            <div class="testimonial-content">
+              <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+              <p>"We booked the Family Suite and were amazed by its spaciousness and comfort. The hotel perfectly balances luxury with authentic mountain charm. Special mention to the staff who went out of their way to make our children feel welcome."</p>
+              <div class="testimonial-author">
+                <div class="author-info">
+                  <h4>The Sharma Family</h4>
+                  <span>New Delhi</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-controls">
+            <div class="testimonial-dots">
+              <span class="dot active" data-slide="0"></span>
+              <span class="dot" data-slide="1"></span>
+              <span class="dot" data-slide="2"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-about">
+          <h3>Hotel Mount Kailash</h3>
+          <p>Luxury mountain accommodation in the heart of Sangla Valley, Himachal Pradesh, offering spectacular views and unparalleled comfort.</p>
+        </div>
+        <div class="footer-contact">
+          <h3>Contact Us</h3>
+          <ul>
+            <li><i class="fas fa-map-marker-alt"></i> Sangla, Kinnaur, Himachal Pradesh, India</li>
+            <li><i class="fas fa-phone"></i> +91 98765 43210</li>
+            <li><i class="fas fa-envelope"></i> info@mountkailashsangla.com</li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="rooms.html">Rooms</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="booking.html">Book Now</a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Hotel Mount Kailash. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    emailjs.init("YOUR_PUBLIC_KEY");
+  </script>
+  <script src="js/main.js"></script>
+  <script src="js/booking.js"></script>
+</body>
+</html>

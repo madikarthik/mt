@@ -1,0 +1,326 @@
+/* Contact Page Specific Styles */
+
+/* Page Banner */
+.page-banner {
+  height: 40rem;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.pexels.com/photos/33170/fall-autumn-sunrise-veil.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  margin-bottom: var(--space-2);
+}
+
+.banner-content h1 {
+  font-size: 4.2rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: var(--space-2);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.breadcrumbs {
+  font-size: 1.6rem;
+}
+
+.breadcrumbs a {
+  color: white;
+  opacity: 0.8;
+}
+
+.breadcrumbs a:hover {
+  opacity: 1;
+}
+
+.breadcrumbs span {
+  margin: 0 var(--space-1);
+}
+
+/* Contact Info */
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+.info-card {
+  background-color: white;
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+}
+
+.info-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 7rem;
+  height: 7rem;
+  background-color: rgba(58, 95, 133, 0.1);
+  border-radius: 50%;
+  margin-bottom: var(--space-2);
+}
+
+.info-icon i {
+  font-size: 2.8rem;
+  color: var(--primary-color);
+}
+
+.info-card h3 {
+  font-size: 2rem;
+  margin-bottom: var(--space-2);
+  color: var(--dark-color);
+}
+
+.info-card p {
+  color: var(--text-light);
+  line-height: 1.8;
+}
+
+/* Contact Form and Map */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+.form-container {
+  background-color: white;
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+}
+
+.contact-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-3);
+}
+
+.form-group {
+  margin-bottom: var(--space-2);
+}
+
+.form-group.full-width {
+  grid-column: span 2;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.8rem;
+  font-weight: 500;
+  color: var(--dark-color);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 1.2rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  font-size: 1.6rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.btn-block {
+  width: 100%;
+}
+
+.map-container {
+  height: 40rem;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Getting Here Section */
+.directions-container {
+  background-color: white;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+
+.direction-tabs {
+  display: flex;
+  background-color: var(--bg-light);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.direction-tab {
+  padding: 1.5rem 2rem;
+  background: none;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.direction-tab:hover {
+  color: var(--primary-color);
+}
+
+.direction-tab.active {
+  color: var(--primary-color);
+}
+
+.direction-tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--primary-color);
+}
+
+.direction-panel {
+  display: none;
+  padding: var(--space-4);
+}
+
+.direction-panel.active {
+  display: block;
+}
+
+.direction-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 7rem;
+  height: 7rem;
+  background-color: rgba(58, 95, 133, 0.1);
+  border-radius: 50%;
+  margin-bottom: var(--space-2);
+}
+
+.direction-icon i {
+  font-size: 2.8rem;
+  color: var(--primary-color);
+}
+
+.direction-panel h3 {
+  font-size: 2.4rem;
+  margin-bottom: var(--space-2);
+  color: var(--dark-color);
+}
+
+.direction-panel p {
+  margin-bottom: var(--space-2);
+  line-height: 1.8;
+}
+
+.direction-panel ul {
+  margin: var(--space-2) 0;
+  padding-left: var(--space-3);
+}
+
+.direction-panel ul li {
+  margin-bottom: var(--space-1);
+  line-height: 1.8;
+}
+
+/* FAQ Section */
+.accordion {
+  background-color: white;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+
+.accordion-item {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.accordion-item:last-child {
+  border-bottom: none;
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-3);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+  background-color: var(--bg-light);
+}
+
+.accordion-header h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--dark-color);
+}
+
+.accordion-icon {
+  color: var(--primary-color);
+  transition: transform 0.3s ease;
+}
+
+.accordion-item.active .accordion-icon {
+  transform: rotate(45deg);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.accordion-item.active .accordion-content {
+  max-height: 200px;
+  padding: 0 var(--space-3) var(--space-3);
+}
+
+.accordion-content p {
+  line-height: 1.8;
+  color: var(--text-light);
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+  .info-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .contact-grid {
+    grid-template-columns: 3fr 2fr;
+  }
+}
+
+@media (min-width: 992px) {
+  .info-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
