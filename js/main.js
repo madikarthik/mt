@@ -3,7 +3,8 @@ document.addEventListener('DOMContentLoaded', function() {
   // Hero Background Images
   const heroImages = [
     'img/hero1.jpg',
-    'img/hero2.jpg'
+    'img/hero2.jpg',
+    'img/hero3.jpg'
   ];
   
   const hero = document.querySelector('.hero');
